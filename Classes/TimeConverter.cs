@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BerlinClock.Grimaldi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,9 @@ namespace BerlinClock
     {
         public string convertTime(string aTime)
         {
-            throw new NotImplementedException();
+            var builder = new ClockBuilder();
+            var result = builder.Build(aTime).ToString();
+            return result;
         }
     }
 }
